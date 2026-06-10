@@ -53,8 +53,13 @@ This repository contains practice of Large Language Models (LLMs), Prompt Engine
 * Text Chunking
 * chunk_size
 * chunk_overlap
+* Embeddings
+* Embedding Vectors
+* Cosine Similarity
 * Semantic Search
-* Introduction to Embeddings
+* ChromaDB
+* Vector Stores
+* Similarity Search
 
 ## Project Structure
 
@@ -78,11 +83,17 @@ AI-ENGINEERING/
 │   ├── 03_output_parser.py
 │   ├── 04_chain.py
 │   ├── 05_chat_prompt_template.py
-│   └── 06_batch.py
+│   ├── 06_batch.py
+│   ├── 07_stream.py
+│   └── notes.md
 │
 ├── rag-basics/
 │   ├── 01_document_loader.py
 │   ├── 02_text_splitter.py
+│   ├── 03_embeddings.py
+│   ├── 04_similarity.py
+│   ├── 05_chromadb.py
+│   ├── 06_chromadb_search.py
 │   └── notes.md
 │
 └── README.md
@@ -94,7 +105,11 @@ AI-ENGINEERING/
 * Groq API
 * Llama Models
 * LangChain
+* ChromaDB
+* Sentence Transformers
 * Prompt Engineering
 * RAG Concepts
+* Semantic Search
+* Vector Embeddings
 * Environment Variables
 * Git & GitHub
