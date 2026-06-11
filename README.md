@@ -60,6 +60,11 @@ This repository contains practice of Large Language Models (LLMs), Prompt Engine
 * ChromaDB
 * Vector Stores
 * Similarity Search
+* Retrievers
+* Retrieval Process
+* Complete RAG Pipeline
+* Context Injection
+* Question Answering using RAG
 
 ## Project Structure
 
@@ -94,6 +99,8 @@ AI-ENGINEERING/
 │   ├── 04_similarity.py
 │   ├── 05_chromadb.py
 │   ├── 06_chromadb_search.py
+│   ├── 07_retriever.py
+│   ├── 08_rag_pipeline.py
 │   └── notes.md
 │
 └── README.md
@@ -111,5 +118,6 @@ AI-ENGINEERING/
 * RAG Concepts
 * Semantic Search
 * Vector Embeddings
+* Retrieval Systems
 * Environment Variables
 * Git & GitHub
