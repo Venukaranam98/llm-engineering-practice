@@ -281,6 +281,203 @@ The embeddings are semantically similar.
 
 ---
 
+---
+
+## Retriever
+
+A Retriever is responsible for fetching the most relevant chunks from a Vector Database based on the user's query.
+
+Purpose:
+
+* Retrieve only relevant chunks
+* Reduce token usage
+* Improve answer quality
+* Avoid sending the entire database to the LLM
+
+Flow:
+
+User Query
+↓
+Embedding
+↓
+Retriever
+↓
+Relevant Chunks
+
+Example:
+
+Stored Chunks:
+
+Chunk 1 → FastAPI
+
+Chunk 2 → JWT Authentication
+
+Chunk 3 → PostgreSQL
+
+User Query:
+
+How do login tokens work?
+
+Retrieved Chunk:
+
+JWT Authentication
+
+Reason:
+
+The retrieved chunk has the highest semantic similarity with the user's query.
+
+---
+
+## Why Retriever is Important
+
+Without Retriever:
+
+10,000 Chunks
+↓
+Send Everything To LLM
+
+Problems:
+
+* Expensive
+* Slow
+* Token Limit Issues
+
+With Retriever:
+
+10,000 Chunks
+↓
+Top Relevant Chunks
+↓
+LLM
+
+Benefits:
+
+* Faster
+* Cheaper
+* More Accurate
+
+---
+
+## Complete RAG Pipeline
+
+A Complete RAG Pipeline combines retrieval and generation.
+
+Flow:
+
+User Question
+↓
+Embedding
+↓
+Retriever
+↓
+Relevant Chunks
+↓
+Prompt
+↓
+LLM
+↓
+Final Answer
+
+Purpose:
+
+* Retrieve relevant information
+* Generate context-aware answers
+* Reduce hallucinations
+
+---
+
+## RAG Pipeline Components
+
+1. Document Loader
+
+Loads files into LangChain Documents.
+
+2. Chunking
+
+Splits large documents into smaller chunks.
+
+3. Embeddings
+
+Converts text into vectors.
+
+4. ChromaDB
+
+Stores vectors and metadata.
+
+5. Retriever
+
+Fetches relevant chunks.
+
+6. Prompt
+
+Combines question and retrieved context.
+
+7. LLM
+
+Generates the final answer.
+
+---
+
+## Retriever vs ChromaDB
+
+ChromaDB:
+
+* Stores embeddings
+* Stores documents
+* Stores metadata
+
+Retriever:
+
+* Searches ChromaDB
+* Retrieves relevant chunks
+* Does not store data
+
+Think:
+
+PostgreSQL → Database
+
+SQL Query → Search
+
+Similarly:
+
+ChromaDB → Vector Database
+
+Retriever → Search Component
+
+---
+
+## RAG Example
+
+Stored Documents:
+
+FastAPI is a Python framework.
+
+JWT is used for authentication.
+
+PostgreSQL is a relational database.
+
+User Question:
+
+How do login tokens work?
+
+Retriever Output:
+
+JWT is used for authentication.
+
+Prompt Sent To LLM:
+
+Context:
+JWT is used for authentication.
+
+Question:
+How do login tokens work?
+
+Final LLM Answer:
+
+Login tokens are commonly implemented using JWT (JSON Web Tokens). After a user logs in, a JWT token is generated and used to authenticate future requests.
+
+---
+
 ## Key Takeaways
 
 * Document Loaders convert files into LangChain Documents.
@@ -292,3 +489,7 @@ The embeddings are semantically similar.
 * ChromaDB stores vectors, documents, and metadata.
 * Vector Stores perform similarity search.
 * Similarity Search retrieves relevant chunks using embeddings.
+* Retrievers fetch the most relevant chunks from a vector database.
+* Complete RAG Pipelines combine retrieval and generation.
+* RAG improves accuracy by providing external context to LLMs.
+
