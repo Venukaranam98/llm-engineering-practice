@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Request
+from datetime import datetime
 
 app = FastAPI()
 
@@ -10,41 +11,26 @@ async def github_webhook(request: Request):
 
     payload = await request.json()
 
-    print("\n" + "=" * 50)
-    print("GitHub Event:", event)
+    timestamp = datetime.now()
 
-    if event == "ping":
+    print("\n" + "=" * 60)
+    print(f"Time      : {timestamp}")
+    print(f"Event     : {event}")
 
-        print("Webhook Connected Successfully!")
-
-    elif event == "push":
-
-        print("New Push Received!")
+    if event == "push":
 
         print(
-            "Repository:",
-            payload["repository"]["name"]
+            f"Repository: {payload['repository']['name']}"
         )
 
         print(
-            "Branch:",
-            payload["ref"]
-        )
-
-    elif event == "pull_request":
-
-        print("Pull Request Event!")
-
-        print(
-            "Action:",
-            payload["action"]
+            f"Branch    : {payload['ref']}"
         )
 
         print(
-            "PR Title:",
-            payload["pull_request"]["title"]
+            f"Pusher    : {payload['pusher']['name']}"
         )
 
-    print("=" * 50)
+    print("=" * 60)
 
     return {"status": "received"}
