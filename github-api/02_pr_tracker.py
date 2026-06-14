@@ -17,7 +17,16 @@ repo = "fastapi"
 
 url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
 
-response = requests.get(url, headers=headers)
+params = {
+    "state": "all",
+    "per_page": 5
+}
+
+response = requests.get(
+    url,
+    headers=headers,
+    params=params
+)
 
 if response.status_code == 200:
 
@@ -27,17 +36,14 @@ if response.status_code == 200:
 
     for pr in pulls:
 
-        print("-" * 50)
-        print("PR Number  :", pr["number"])
-        print("Title      :", pr["title"])
-        print("Author     :", pr["user"]["login"])
-        print("State      :", pr["state"])
-        print("URL        :", pr["html_url"])
-
-        print("\nAvailable Keys:")
-        print(pr.keys())
-
-        break
+        print("-" * 60)
+        print("PR Number   :", pr["number"])
+        print("Title       :", pr["title"])
+        print("Author      :", pr["user"]["login"])
+        print("State       :", pr["state"])
+        print("Created At  :", pr["created_at"])
+        print("Merged At   :", pr["merged_at"])
+        print("URL         :", pr["html_url"])
 
 else:
     print("Error:", response.status_code)
