@@ -1,6 +1,6 @@
 # LLM Engineering Practice
 
-This repository contains practice of Large Language Models (LLMs), Prompt Engineering, LangChain, and Retrieval-Augmented Generation (RAG) using Python.
+This repository contains practice of Large Language Models (LLMs), Prompt Engineering, LangChain, Retrieval-Augmented Generation (RAG), FastAPI, GitHub APIs, Webhooks, Background Tasks, and Backend Development using Python.
 
 ## Topics Covered
 
@@ -43,7 +43,8 @@ This repository contains practice of Large Language Models (LLMs), Prompt Engine
 * invoke()
 * batch()
 * stream()
-* Memory Concepts
+
+### Memory Concepts
 
 ### RAG Basics
 
@@ -53,18 +54,74 @@ This repository contains practice of Large Language Models (LLMs), Prompt Engine
 * Text Chunking
 * chunk_size
 * chunk_overlap
-* Embeddings
+
+### Embeddings
+
 * Embedding Vectors
 * Cosine Similarity
 * Semantic Search
-* ChromaDB
+
+### ChromaDB
+
 * Vector Stores
 * Similarity Search
 * Retrievers
 * Retrieval Process
-* Complete RAG Pipeline
+
+### Complete RAG Pipeline
+
 * Context Injection
 * Question Answering using RAG
+
+### FastAPI & Backend Development
+
+* FastAPI Basics
+* CRUD APIs
+* Pydantic Schemas
+* Request & Response Handling
+* SQLite
+* PostgreSQL
+* SQLAlchemy ORM
+* Database Models
+* Query Operations
+* REST APIs
+
+### GitHub REST API
+
+* Personal Access Tokens
+* Authentication Headers
+* Repository API
+* Pull Request API
+* Contributor Analytics
+* JSON Response Handling
+
+### GitHub Webhooks
+
+* Webhook Events
+* Push Events
+* Pull Request Events
+* Event Payloads
+* Event Headers
+* ngrok Integration
+* Real-Time Event Processing
+
+### Background Tasks
+
+* FastAPI BackgroundTasks
+* add_task()
+* Asynchronous Processing
+* Webhook Event Processing
+* Event Logging
+
+### Event Storage & Analytics
+
+* SQLite Event Database
+* SQLAlchemy Models
+* Database Sessions
+* Event Storage
+* Analytics APIs
+
+---
 
 ## Project Structure
 
@@ -103,7 +160,24 @@ AI-ENGINEERING/
 │   ├── 08_rag_pipeline.py
 │   └── notes.md
 │
+├── github-api/
+│   ├── 01_repo_info_fetcher.py
+│   ├── 02_pr_tracker.py
+│   ├── 03_contributor_analytics.py
+│   ├── 04_webhook_practice.py
+│   ├── 05_background_tasks.py
+│   ├── 06_webhook_background_task.py
+│   ├── 07_event_logger.py
+│   ├── 08_event_database.py
+│   ├── 09_webhook_database.py
+│   ├── 10_analytics_api.py
+│   ├── database.py
+│   ├── models.py
+│   ├── requirements.txt
+│   └── README.md
+│
 └── README.md
+
 ```
 
 ## Technologies Used
@@ -119,5 +193,12 @@ AI-ENGINEERING/
 * Semantic Search
 * Vector Embeddings
 * Retrieval Systems
+* FastAPI
+* SQLAlchemy
+* SQLite
+* GitHub REST API
+* GitHub Webhooks
+* Background Tasks
+* ngrok
 * Environment Variables
 * Git & GitHub
