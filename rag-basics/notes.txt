@@ -1,0 +1,17 @@
+E-Kart is a full-stack e-commerce application.
+
+Backend technologies:
+- FastAPI
+- PostgreSQL
+- Redis
+- Celery
+
+Frontend technologies:
+- React
+- JavaScript
+
+Features:
+- JWT Authentication
+- Razorpay Integration
+- Product Search
+- Category Filtering
