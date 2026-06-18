@@ -1,6 +1,6 @@
 # LLM Engineering Practice
 
-This repository contains practice of Large Language Models (LLMs), Prompt Engineering, LangChain, Retrieval-Augmented Generation (RAG), FastAPI, GitHub APIs, Webhooks, Background Tasks, and Backend Development using Python.
+This repository contains practice of Large Language Models (LLMs), Prompt Engineering, LangChain, Retrieval-Augmented Generation (RAG), Vector Databases, FastAPI, GitHub APIs, Webhooks, Background Tasks, and Backend Development using Python.
 
 ## Topics Covered
 
@@ -24,6 +24,7 @@ This repository contains practice of Large Language Models (LLMs), Prompt Engine
 * Temperature Control
 * Few-Shot Prompting
 * Structured JSON Output
+* Prompt Design Best Practices
 
 ### Token Management
 
@@ -54,12 +55,14 @@ This repository contains practice of Large Language Models (LLMs), Prompt Engine
 * Text Chunking
 * chunk_size
 * chunk_overlap
+* RecursiveCharacterTextSplitter
 
 ### Embeddings
 
 * Embedding Vectors
 * Cosine Similarity
 * Semantic Search
+* Similarity Search
 
 ### ChromaDB
 
@@ -67,9 +70,20 @@ This repository contains practice of Large Language Models (LLMs), Prompt Engine
 * Similarity Search
 * Retrievers
 * Retrieval Process
+* Collections
+* PersistentClient
+* Collection Management
+* Vector Persistence
+* add()
+* query()
+* update()
+* Unique Document IDs
 
 ### Complete RAG Pipeline
 
+* Document → Chunking → Embeddings
+* Embeddings → Vector Database
+* Retrieved Context → LLM
 * Context Injection
 * Question Answering using RAG
 
@@ -79,6 +93,8 @@ This repository contains practice of Large Language Models (LLMs), Prompt Engine
 * CRUD APIs
 * Pydantic Schemas
 * Request & Response Handling
+* JWT Authentication
+* Password Hashing
 * SQLite
 * PostgreSQL
 * SQLAlchemy ORM
@@ -150,6 +166,8 @@ AI-ENGINEERING/
 │   └── notes.md
 │
 ├── rag-basics/
+│   ├── chroma_db/
+│   ├── .env
 │   ├── 01_document_loader.py
 │   ├── 02_text_splitter.py
 │   ├── 03_embeddings.py
@@ -158,7 +176,17 @@ AI-ENGINEERING/
 │   ├── 06_chromadb_search.py
 │   ├── 07_retriever.py
 │   ├── 08_rag_pipeline.py
-│   └── notes.md
+│   ├── 09_rag_chatbot.py
+│   ├── app.py
+│   ├── notes.md
+│   ├── notes.txt
+│   └── rag_chunks.py
+│
+├── vector-db-practice/
+│   ├── chroma_db/
+│   ├── app.py
+│   ├── chunking.py
+│   └── persistent_db.py
 │
 ├── github-api/
 │   ├── 01_repo_info_fetcher.py
@@ -177,7 +205,6 @@ AI-ENGINEERING/
 │   └── README.md
 │
 └── README.md
-
 ```
 
 ## Technologies Used
@@ -187,6 +214,7 @@ AI-ENGINEERING/
 * Llama Models
 * LangChain
 * ChromaDB
+* Vector Databases
 * Sentence Transformers
 * Prompt Engineering
 * RAG Concepts
@@ -196,6 +224,9 @@ AI-ENGINEERING/
 * FastAPI
 * SQLAlchemy
 * SQLite
+* PostgreSQL
+* Redis
+* Celery
 * GitHub REST API
 * GitHub Webhooks
 * Background Tasks
