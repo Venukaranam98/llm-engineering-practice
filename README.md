@@ -63,6 +63,8 @@ This repository contains practice of Large Language Models (LLMs), Prompt Engine
 * Cosine Similarity
 * Semantic Search
 * Similarity Search
+* HuggingFace Embeddings
+* Sentence Transformer Embeddings
 
 ### ChromaDB
 
@@ -78,6 +80,8 @@ This repository contains practice of Large Language Models (LLMs), Prompt Engine
 * query()
 * update()
 * Unique Document IDs
+* Metadata Storage
+* Metadata Retrieval
 
 ### Complete RAG Pipeline
 
@@ -86,6 +90,9 @@ This repository contains practice of Large Language Models (LLMs), Prompt Engine
 * Retrieved Context → LLM
 * Context Injection
 * Question Answering using RAG
+* Interactive RAG Chatbot
+* Retriever + LLM Pipeline
+* Conversational Question Answering
 
 ### FastAPI & Backend Development
 
@@ -179,14 +186,27 @@ AI-ENGINEERING/
 │   ├── 09_rag_chatbot.py
 │   ├── app.py
 │   ├── notes.md
+│   ├── notes.pdf
 │   ├── notes.txt
-│   └── rag_chunks.py
+│   ├── rag_chunks.py
+│   └── requirements.txt
 │
 ├── vector-db-practice/
 │   ├── chroma_db/
+│   ├── 01_document_loader.py
+│   ├── 02_text_splitter.py
+│   ├── 03_embeddings.py
+│   ├── 04_chromadb.py
+│   ├── 05_similarity_search.py
+│   ├── 06_metadata_store.py
+│   ├── 07_retriever.py
+│   ├── 08_rag_pipeline.py
+│   ├── 09_rag_chatbot.py
 │   ├── app.py
 │   ├── chunking.py
-│   └── persistent_db.py
+│   ├── notes.pdf
+│   ├── persistent_db.py
+│   └── requirements.txt
 │
 ├── github-api/
 │   ├── 01_repo_info_fetcher.py
@@ -216,11 +236,14 @@ AI-ENGINEERING/
 * ChromaDB
 * Vector Databases
 * Sentence Transformers
+* HuggingFace Embeddings
 * Prompt Engineering
 * RAG Concepts
 * Semantic Search
+* Similarity Search
 * Vector Embeddings
 * Retrieval Systems
+* LangChain Retrievers
 * FastAPI
 * SQLAlchemy
 * SQLite
